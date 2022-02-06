@@ -1,0 +1,4 @@
+apps:
+  - name: Foreca-weather-app
+    random-route: <https://weathers.eu-gb.cf.appdomain.cloud/>
+    memory: 128M
