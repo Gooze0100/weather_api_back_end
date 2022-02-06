@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 
-const URL = "mongodb://localhost/27017";
+const URL =
+  "mongodb+srv://node_weather:NTw2SmVJLNCcqrrY@weathers.qazat.mongodb.net/weathers?retryWrites=true&w=majority";
 const DB_NAME = "weathers";
 const MAX_TRIES = 3;
 
