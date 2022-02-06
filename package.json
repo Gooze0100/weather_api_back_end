@@ -1,0 +1,30 @@
+{
+  "name": "nodeApi",
+  "version": "1.0.0",
+  "description": "IBM internship back-end part",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "mocha",
+    "doc": "npx jsdoc -c ./jsdoc.json"
+  },
+  "keywords": [
+    "Express",
+    "JavaScript",
+    "Node.js",
+    "MongoDB"
+  ],
+  "author": "Giedrius Kalnius",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1"
+  },
+  "devDependencies": {
+    "docdash": "^1.2.0",
+    "jsdoc": "^3.6.10",
+    "mocha": "^9.2.0"
+  }
+}
