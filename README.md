@@ -16,10 +16,10 @@ Start application with `npm start`
 
 ## Endpoints
 
-# GET `/keywords` // Get all keywords registered from MongoDB collection: keywords.
+GET `/keywords` // Get all keywords registered from MongoDB collection: keywords.
 
-# GET `/keywords/save/:keyword` // Send keyword to MongoDB.
+GET `/keywords/save/:keyword` // Send keyword to MongoDB.
 
-# GET `/conditions` // Get all conditions registered with timestamps from MongoDB collection: conditions.
+GET `/conditions` // Get all conditions registered with timestamps from MongoDB collection: conditions.
 
-# GET `/conditions/save/:condition/:timestamp` // Send condition and timestamp to MongoDB.
+GET `/conditions/save/:condition/:timestamp` // Send condition and timestamp to MongoDB.
