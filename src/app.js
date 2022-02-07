@@ -9,9 +9,9 @@ const PORT = 8080;
 const WEB = "web";
 
 app.use(cors());
-app.use(express.static(WEB));
 app.use("/keywords", keywordsRouter);
 app.use("/conditions", conditionsRouter);
+app.use(express.static(WEB));
 app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.send("Invalid Endpoint");

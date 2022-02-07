@@ -4,7 +4,7 @@ const URL =
   "mongodb+srv://node_weather:NTw2SmVJLNCcqrrY@weathers.qazat.mongodb.net/weathers?retryWrites=true&w=majority";
 const DB_NAME = "weathers";
 const MAX_TRIES = 3;
-
+/** @type {MongoClient} */
 let conn;
 
 /**
@@ -51,14 +51,9 @@ async function testConnection(db) {
 }
 
 /**
-Returns db for configured data base name from connection.
-Automatically connects if there is no connection.
-Makes sure that connection is alive before returning it.
-*/
-/**
  * Returns db for configured data base name from connection.
  * Automatically connects if there is no connection.
- *
+ * Makes sure that connection is alive before returning it.
  * @returns {object} connected and tested db object.
  * @throws {Error} when fails to connect.
  */
