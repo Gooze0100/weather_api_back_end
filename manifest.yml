@@ -2,4 +2,4 @@
 applications:
   - name: Foreca-weather-app
     random-route: true
-    memory: 128M
+    memory: 256M

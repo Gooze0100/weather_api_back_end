@@ -1,9 +1,10 @@
 import { MongoClient } from "mongodb";
 
 const URL =
-  "mongodb+srv://node_weather:NTw2SmVJLNCcqrrY@weathers.qazat.mongodb.net/weathers?retryWrites=true&w=majority";
+  "mongodb+srv://node_weather:node_weather@weathers.qazat.mongodb.net/weathers?retryWrites=true&w=majority";
 const DB_NAME = "weathers";
 const MAX_TRIES = 3;
+
 /** @type {MongoClient} */
 let conn;
 
@@ -27,7 +28,7 @@ async function connect(tryCounter) {
     await conn.connect();
   } catch (err) {
     conn = null;
-    connect(++tryCounter);
+    await connect(++tryCounter);
   }
 }
 
@@ -75,11 +76,8 @@ Closes connection to database.
 async function close() {
   try {
     await conn.close();
-  } catch (err) {
-    throw new Error(err);
-  } finally {
-    conn = null;
-  }
+  } catch (err) {}
+  conn = null;
 }
 
 export { close, getDb };
